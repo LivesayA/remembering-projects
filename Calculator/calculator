@@ -2,5 +2,23 @@
 
 print("What would you like to add?")
 
-def Addition(int1, int2):
-    return int1 + int2
+def check_num(number):
+    if type(number) is int:
+        return number
+    else:
+        print("The number " + number + " is not an integer.")
+        return number
+
+def Addition(num1, num2):
+    
+    return
+
+def Subtraction():
+    
+    return
+
+def Multiplication():
+    return
+
+def Division():
+    return
