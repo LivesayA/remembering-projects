@@ -1,0 +1,6 @@
+#trying to remember how everything works. 
+
+print("What would you like to add?")
+
+def Addition(int1, int2):
+    return int1 + int2
