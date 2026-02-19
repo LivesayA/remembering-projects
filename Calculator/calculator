@@ -1,5 +1,9 @@
 #trying to remember how everything works. 
 
+print("What would you like to add?")
+
+num1:int = input("First number: ")
+num2:int = input("Second number: ")
 
 def check_num(number):
     if type(number) is int:
@@ -20,11 +24,6 @@ def Multiplication(num1, num2):
 
 def Division(num1, num2):
     return
-
-print("What would you like to add?")
-
-num1:int = input("First number: ")
-num2:int = input("Second number: ")
 
 if check_num(num1) and check_num(num2) == True:
     input("What would you like to do with these numbers? ")
