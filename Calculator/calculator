@@ -1,24 +1,32 @@
 #trying to remember how everything works. 
 
-print("What would you like to add?")
 
 def check_num(number):
     if type(number) is int:
-        return number
+        return True
     else:
-        print("The number " + number + " is not an integer.")
-        return number
+        return False
 
 def Addition(num1, num2):
     
     return
 
-def Subtraction():
+def Subtraction(num1, num2):
     
     return
 
-def Multiplication():
+def Multiplication(num1, num2):
     return
 
-def Division():
+def Division(num1, num2):
     return
+
+print("What would you like to add?")
+
+num1:int = input("First number: ")
+num2:int = input("Second number: ")
+
+if check_num(num1) and check_num(num2) == True:
+    input("What would you like to do with these numbers? ")
+else:
+    print("One of the numbers is not an integer. Please ensure both numbers do not have decimals.")
