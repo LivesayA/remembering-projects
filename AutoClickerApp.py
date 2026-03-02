@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 from pynput import keyboard
-from ClickPlayer import ClickPlayer
+from player import ClickPlayer
 
 class AutoClickerApp:
     def __init__(self, root):
