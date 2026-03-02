@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog
-from pynput import keyboard
+from recorder import Recorder
 from player import ClickPlayer
 
 class AutoClickerApp:
@@ -8,13 +8,27 @@ class AutoClickerApp:
         self.root = root
         self.root.title("Custom AutoClicker")
         
+        self.recorder = Recorder()
         self.player = ClickPlayer()
         
         #GUI Elements
-        tk.Button(root, text="Load Recording", command=self.load_file).pack()
-        tk.Button(root, text="Start", command=self.player.start).pack()
-        tk.Button(root, text="Stop", command=self.player.stop).pack()
-        tk.Button(root, text="Pause / Resume", command=self.player.toggle_pause)
+        tk.Button(root, text="Start Recording", 
+                  command=self.recorder.start).pack() #Starting a recording
+        
+        tk.Button(root, text="Stop Recording", 
+                  command=self.recorder.stop).pack() #Stopping a recording
+        
+        tk.Button(root, text="Load Recording", 
+                  command=self.load_file).pack() #Loading a Recording
+        
+        tk.Button(root, text="Start Playback", 
+                  command=self.player.start).pack() #Starting Playback
+        
+        tk.Button(root, text="Stop Playback", 
+                  command=self.player.stop).pack() #Stopping Playback
+        
+        tk.Button(root, text="Pause / Resume",
+                  command=self.player.toggle_pause).pack() #Toggle Pause
         
         self.loop_var = tk.BooleanVar()
         tk.Checkbutton(root, text="Loop", variable=self.loop_var, command=self.update_loop).pack()
@@ -26,9 +40,8 @@ class AutoClickerApp:
         
         tk.Button(root, text="Apply Speed", command=self.update_speed).pack()
         
-        #Start hotkey listener
-        self.listener = keyboard.Listener(on_press=self.on_key_press)
-        self.listener.start()
+    def stop_recording(self):
+        self.recorder.stop()
         
     def load_file(self):
         filename = filedialog.askopenfilename(filetypes=[("JSON Files", "*.json")])
