@@ -1,8 +1,6 @@
-import time
-import json
-import threading
-import pyautogui
+import time, json, threading, pyautogui, logging
 
+logger = logging.getLogger(__name__)
 
 class ClickPlayer:
     def __init__(self):
@@ -10,8 +8,8 @@ class ClickPlayer:
         self.loop = False
         self.speed = 1.0
         
-        self.running = False
-        self.paused = False
+        self.running = threading.Event()
+        self.paused = threading.Event()
         self.thread = None
         
         pyautogui.FAILSAFE = True
@@ -52,7 +50,8 @@ class ClickPlayer:
     
     def start(self):
         if not self.events:
-            print("No events loaded.")
+            logger.info("No events loaded.")
+            #print("No events loaded.")
             return
         
         if not self.running:
@@ -64,23 +63,10 @@ class ClickPlayer:
         
     def toggle_pause(self):
         self.paused = not self.paused
-        print("Paused" if self.paused else "Resumed")
+        logger.info("Paused" if self.paused else "Resumed")
+        #print("Paused" if self.paused else "Resumed")
         
-class AutoClickerApp:
-    def __init__(self, root):
-        self.root = root
-        self.root.title("Custom AutoClicker")
         
-        self.player = ClickPlayer()
-            
-if __name__ == "__main__":
-    player = ClickPlayer(
-        filename="mouse_recording.json",
-        loop=True, #Set to false for single playback
-        speed=1.0 #1.0 = normal speed
-    )
-    
-    player.play()
 
 # with open("mouse_recording.json", "r") as f:
 #     events = json.load(f)

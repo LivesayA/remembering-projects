@@ -1,35 +1,34 @@
-import time
-import json
-import threading
-import pyautogui
+import time, json, threading, pyautogui, logging
+
+logger = logging.getLogger(__name__)
 
 class ClickPlayer:
-    def __init__(self):
+    def __init__(self, config):
+        self.config = config
         self.events = []
-        self.loop = False
-        self.speed = 1.0
         
-        self.running = False
-        self.paused = False
+        self.pause_event = threading.Event()
+        self.stop_event = threading.Event()
         self.thread = None
         
         pyautogui.FAILSAFE = True
         
-    def load_events(self):
-        with open(self.filename, "r") as f:
+    def load_events(self, filename):
+        with open(filename, "r") as f:
             self.events = json.load(f)
+        logger.info(f"Loaded events from {filename}")
     
-    def play_once(self):
+    def _play_once(self):
         previous_time = 0
         
         for event in self.events:
-            if not self.running:
+            if not self.stop_event.is_set():
                 return
             
-            while self.paused:
+            while self.pause_event.is_set():
                 time.sleep(0.1)
             
-            delay = (event["time"] - previous_time) / self.speed
+            delay = (event["time"] - previous_time) / self.config.get("speed")
             time.sleep(max(delay, 0))
             previous_time = event["time"]
             
@@ -42,25 +41,43 @@ class ClickPlayer:
                     pyautogui.mouseUp(event["x"], event["y"])
                     
     def _run(self):
-        self.running = True
-        while self.running:
-            self.play_once()
-            if not self.loop:
+        logger.info("Playback started")
+        while not self.stop_event.is_set():
+            self._play_once()
+            if not self.config.get("loop"):
                 break
-        self.running = False
+        logger.info("Playback stopped")
     
     def start(self):
         if not self.events:
-            print("No events loaded.")
+            logger.warning("No events loaded.")
+            #print("No events loaded.")
             return
         
-        if not self.running:
-            self.thread = threading.Thread(target=self._runrun)
-            self.thread.start()
+        if self.thread and self.thread.is_alive():
+            return
+        
+        self.stop_event.clear()
+        self.pause_event.clear()
+        
+        self.thread = threading.Thread(target=self._run, daemon=True)
+        self.thread.start()
+        
+        # if not self.running:
+        #     self.thread = threading.Thread(target=self._runrun)
+        #     self.thread.start()
             
     def stop(self):
-        self.running = False
+        self.stop_event.set()
+        #self.running = False
         
     def toggle_pause(self):
-        self.paused = not self.paused
-        print("Paused" if self.paused else "Resumed")
+        if self.pause_event.is_set():
+            self.pause_event.clear()
+            logger.info("Playback resumed")
+        else:
+            self.pause_event.set()
+            logger.info("Playback paused")
+        # self.paused = not self.paused
+        # logger.info("Paused" if self.paused else "Resumed")
+        #print("Paused" if self.paused else "Resumed")

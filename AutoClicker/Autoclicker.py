@@ -1,8 +1,9 @@
-import time, json
+import time, json, logging
 from pynput import mouse
 
 events = []
 start_time = None
+logger = logging.getLogger(__name__)
 
 def on_click(x, y, button, pressed):
     global start_time
@@ -20,7 +21,8 @@ def on_click(x, y, button, pressed):
         "time": event_time
     })
     
-    print(f"{'Pressed' if pressed else 'Released'} at {(x,y)}")
+    logger.info(f"{'Pressed' if pressed else 'Released'} at {(x,y)}")
+    #print(f"{'Pressed' if pressed else 'Released'} at {(x,y)}")
     
 def on_move(x,y):
     global start_time
@@ -37,10 +39,12 @@ def on_move(x,y):
     })
     
 with mouse.Listener(on_click=on_click, on_move=on_move) as listener:
-    print("Recording... Press Ctrl+C to stop.")
+    logger.info("Recording... Press Ctrl+C to stop.")
+    #print("Recording... Press Ctrl+C to stop.")
     try:
         listener.join()
     except KeyboardInterrupt:
         with open("mouse_recording.json", "w") as f:
             json.dump(events, f, indent=4)
-        print("Recording saved.")
+        logger.info("Recording saved.")
+        #print("Recording saved.")

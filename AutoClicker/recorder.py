@@ -1,12 +1,14 @@
-import time
-import json
+import time, json, logging
 from pynput import mouse
+
+logger = logging.getLogger(__name__)
 
 class Recorder:
     def __init__(self):
         self.events = []
         self.start_time = None
         self.listener - None
+        self.last_position = None
     
     def _on_click(self, x, y, button, pressed):
         if self.start_time is None:
@@ -24,8 +26,21 @@ class Recorder:
         })
         
     def _on_move(self, x, y):
+        if not self.config.get("record_moves"):
+            return
+        
         if self.start_time is None:
             self.start_time = time.time()
+        
+        threshold = self.config.get("move_threshold")
+        
+        if self.last_position:
+            dx = abs(x - self.last_position[0])
+            dy = abs(y - self.last_position[1])
+            if dx < threshold and dy < threshold:
+                return
+        
+        self.last_position = (x, y)
         
         event_time = time.time() - self.start_time
         
@@ -44,7 +59,8 @@ class Recorder:
             on_move=self._on_move
         )
         self.listener.start()
-        print("Recording started.")
+        logger.info("Recording started.")
+        #print("Recording started.")
         
     def stop(self, filename="mouse_recording.json"):
         if self.listener:
@@ -53,5 +69,5 @@ class Recorder:
             
         with open(filename, "w") as f:
             json.dump(self.events, f, indent=4)
-            
-        print("Recording saved to", filename)
+        logger.info(f"Recording saved to {filename}")
+        #print("Recording saved to", filename)
