@@ -7,13 +7,16 @@ class ConfigManager:
         self.config = {
             "speed": 1.0,
             "loop": False,
+            "move_threshold": 5,
+            "record_moves": True,
             "hotkeys": {
                 "start": "f6",
                 "stop": "f7",
-                "pause": "f8"
+                "pause": "f8",
+                # "start_recording": "f9",
+                # "stop_recording": "f10"
             },
-            "last_file": "",
-            "record_moves": True
+            "last_file": ""
         }
         
         self.load()
@@ -27,8 +30,8 @@ class ConfigManager:
         with open(self.filename, "w") as f:
             json.dump(self.config, f, indent=4)
             
-    def get(self, key):
-        return self.config.get(key)
+    def get(self, key, default=None):
+        return self.config.get(key, default)
     
     def set(self, key, value):
         self.config[key] = value

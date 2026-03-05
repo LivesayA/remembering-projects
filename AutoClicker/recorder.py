@@ -1,13 +1,15 @@
 import time, json, logging
 from pynput import mouse
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
 class Recorder:
-    def __init__(self):
+    def __init__(self, config):
+        self.config = config
         self.events = []
         self.start_time = None
-        self.listener - None
+        self.listener = None
         self.last_position = None
     
     def _on_click(self, x, y, button, pressed):
@@ -63,11 +65,22 @@ class Recorder:
         #print("Recording started.")
         
     def stop(self, filename="mouse_recording.json"):
+        
+        filename = self.config.get("recording_file")
+        
+        with open(filename, "w") as f:
+            json.dump(self.events, f, indent=4)
+            
+        #logger.info("Recording saved to %s", filename)
+        
+        BASE_DIR = Path(__file__).resolve().parent
+        filename = BASE_DIR / "mouse_recording.json"
+        
         if self.listener:
             self.listener.stop()
             self.listener = None
             
         with open(filename, "w") as f:
             json.dump(self.events, f, indent=4)
-        logger.info(f"Recording saved to {filename}")
+        logger.info("Recording saved to %s", filename)
         #print("Recording saved to", filename)

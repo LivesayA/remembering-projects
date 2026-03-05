@@ -1,0 +1,13 @@
+{
+    "speed": 1.0,
+    "loop": true,
+    "move_threshold": 5,
+    "record_moves": true,
+    "hotkeys": {
+        "start": "f6",
+        "stop": "f7",
+        "pause": "f8"
+    },
+    "last_file": "D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json",
+    "recording_file": "D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json"
+}

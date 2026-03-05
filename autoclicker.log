@@ -1,0 +1,118 @@
+ 2026-03-04 16:40:57,548 - INFO - recorder - Recording started.
+ 2026-03-04 16:41:03,965 - INFO - recorder - Recording saved to mouse_recording.json
+ 2026-03-04 16:41:05,072 - WARNING - player - No events loaded.
+ 2026-03-04 16:41:11,196 - INFO - player - Loaded events from D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 16:41:12,918 - INFO - player - Playback started
+ 2026-03-04 16:41:18,995 - INFO - player - Playback stopped
+ 2026-03-04 16:41:19,639 - INFO - player - Playback paused
+ 2026-03-04 16:41:28,190 - INFO - player - Playback started
+ 2026-03-04 17:39:57,444 - INFO - recorder - Recording started.
+ 2026-03-04 17:40:04,245 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 17:40:05,921 - INFO - player - No events loaded.
+ 2026-03-04 17:40:08,045 - INFO - player - No events loaded.
+ 2026-03-04 17:40:08,497 - INFO - player - No events loaded.
+ 2026-03-04 17:40:11,102 - INFO - player - Loaded events from D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 17:40:11,103 - INFO - AutoClickerApp - Loaded: D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 17:40:12,454 - INFO - player - Playback started
+ 2026-03-04 17:40:32,765 - INFO - player - Playback paused
+ 2026-03-04 17:40:34,596 - INFO - player - Playback resumed
+ 2026-03-04 17:40:35,483 - INFO - player - Playback paused
+ 2026-03-04 17:40:43,239 - INFO - player - Playback resumed
+ 2026-03-04 17:40:44,896 - INFO - player - Playback paused
+ 2026-03-04 17:40:49,244 - INFO - player - Loaded events from D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 17:40:49,244 - INFO - AutoClickerApp - Loaded: D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 17:40:53,883 - INFO - player - Playback resumed
+ 2026-03-04 17:40:56,976 - INFO - player - Playback paused
+ 2026-03-04 17:40:57,578 - INFO - player - Playback resumed
+ 2026-03-04 17:41:01,392 - INFO - player - Playback paused
+ 2026-03-04 17:41:02,159 - INFO - player - Playback resumed
+ 2026-03-04 17:41:38,180 - INFO - player - Playback stopped
+ 2026-03-04 17:41:44,462 - INFO - recorder - Recording started.
+ 2026-03-04 17:41:49,740 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 17:41:51,148 - INFO - player - Playback started
+ 2026-03-04 17:41:54,264 - INFO - player - Playback paused
+ 2026-03-04 17:41:55,082 - INFO - player - Playback resumed
+ 2026-03-04 17:42:04,161 - INFO - player - Playback paused
+ 2026-03-04 17:42:04,626 - INFO - player - Playback resumed
+ 2026-03-04 17:42:08,192 - INFO - player - Playback paused
+ 2026-03-04 17:42:08,613 - INFO - player - Playback resumed
+ 2026-03-04 17:42:13,327 - INFO - player - Playback paused
+ 2026-03-04 17:52:32,657 - INFO - recorder - Recording started.
+ 2026-03-04 17:52:37,276 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 17:52:42,665 - INFO - player - Loaded events from D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 17:52:42,666 - INFO - AutoClickerApp - Loaded: D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 17:52:46,321 - INFO - player - Playback started
+ 2026-03-04 17:52:48,905 - INFO - player - Playback paused
+ 2026-03-04 17:52:50,671 - INFO - player - Playback resumed
+ 2026-03-04 17:52:53,713 - INFO - player - Playback started
+ 2026-03-04 18:06:55,523 - INFO - recorder - Recording started.
+ 2026-03-04 18:07:02,530 - INFO - recorder - Recording saved to mouse_recording
+ 2026-03-04 18:07:02,549 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:07:09,035 - INFO - player - No events loaded.
+ 2026-03-04 18:07:10,708 - INFO - player - No events loaded.
+ 2026-03-04 18:07:11,083 - INFO - player - No events loaded.
+ 2026-03-04 18:07:11,344 - INFO - player - No events loaded.
+ 2026-03-04 18:07:12,523 - INFO - player - No events loaded.
+ 2026-03-04 18:07:13,208 - INFO - player - Playback paused
+ 2026-03-04 18:07:14,246 - INFO - player - Playback resumed
+ 2026-03-04 18:07:17,502 - INFO - player - No events loaded.
+ 2026-03-04 18:07:17,909 - INFO - player - No events loaded.
+ 2026-03-04 18:07:18,145 - INFO - player - No events loaded.
+ 2026-03-04 18:07:18,392 - INFO - player - No events loaded.
+ 2026-03-04 18:07:18,604 - INFO - player - No events loaded.
+ 2026-03-04 18:11:46,979 - INFO - recorder - Recording started.
+ 2026-03-04 18:11:52,113 - INFO - recorder - Recording saved to D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 18:11:52,125 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:11:55,759 - INFO - player - Loading file: D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 18:11:55,761 - INFO - player - Loaded events from D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 18:11:55,761 - INFO - AutoClickerApp - Loaded: D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 18:14:07,834 - INFO - recorder - Recording started.
+ 2026-03-04 18:14:14,280 - INFO - recorder - Recording saved to D:/Programs(Python)/remembering-projects/mouse_recording.json
+ 2026-03-04 18:14:14,307 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:14:31,086 - INFO - player - Loading file: D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:14:31,095 - INFO - player - Loaded 2728 events
+ 2026-03-04 18:14:31,096 - INFO - player - Loaded events from D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:14:31,096 - INFO - AutoClickerApp - Loaded: D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:14:33,562 - INFO - player - Playback started
+ 2026-03-04 18:14:36,090 - INFO - recorder - Recording saved to D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:14:36,113 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:14:38,553 - INFO - recorder - Recording saved to D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:14:38,573 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:14:39,183 - INFO - player - Playback paused
+ 2026-03-04 18:14:41,022 - INFO - player - Playback resumed
+ 2026-03-04 18:14:41,880 - INFO - player - Playback stopped
+ 2026-03-04 18:14:43,235 - INFO - player - Playback paused
+ 2026-03-04 18:14:43,660 - INFO - player - Playback resumed
+ 2026-03-04 18:14:44,247 - INFO - player - Playback started
+ 2026-03-04 18:14:45,383 - INFO - player - Playback paused
+ 2026-03-04 18:19:51,753 - INFO - recorder - Recording started.
+ 2026-03-04 18:19:55,411 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:19:59,466 - INFO - player - No events loaded.
+ 2026-03-04 18:20:05,415 - INFO - player - Loading file: D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:20:05,422 - INFO - player - Loaded 1372 events
+ 2026-03-04 18:20:05,422 - INFO - player - Loaded events from D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:20:05,423 - INFO - AutoClickerApp - Loaded: D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:20:06,721 - INFO - player - Playback started
+ 2026-03-04 18:20:07,841 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:08,941 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:10,053 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:11,183 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:12,230 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:13,429 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:14,649 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:15,823 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:16,958 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:18,056 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:19,176 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:19,597 - INFO - player - Playback paused
+ 2026-03-04 18:20:30,664 - INFO - player - Loading file: D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:20:30,672 - INFO - player - Loaded 1372 events
+ 2026-03-04 18:20:30,673 - INFO - player - Loaded events from D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:20:30,674 - INFO - AutoClickerApp - Loaded: D:/Programs(Python)/remembering-projects/AutoClicker/mouse_recording.json
+ 2026-03-04 18:20:36,834 - INFO - player - Playback resumed
+ 2026-03-04 18:20:37,574 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:41,991 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:46,437 - INFO - recorder - Recording saved to D:\Programs(Python)\remembering-projects\AutoClicker\mouse_recording.json
+ 2026-03-04 18:20:48,219 - INFO - player - Playback paused
+ 2026-03-04 18:20:52,320 - INFO - player - Playback resumed
+ 2026-03-04 18:20:52,351 - INFO - player - Playback stopped

@@ -12,28 +12,37 @@ class ClickPlayer:
         self.thread = None
         
         pyautogui.FAILSAFE = True
+        pyautogui.PAUSE = 0
         
     def load_events(self, filename):
+        logger.info("Loading file: %s", filename)
+        
+        filename = self.config.get("recording_file")
         with open(filename, "r") as f:
             self.events = json.load(f)
-        logger.info(f"Loaded events from {filename}")
+        
+        logger.info("Loaded %d events", len(self.events))    
+        logger.info("Loaded events from %s", filename)
     
     def _play_once(self):
         previous_time = 0
+        speed = self.config.get("speed", 1.0)
         
         for event in self.events:
-            if not self.stop_event.is_set():
+            if self.stop_event.is_set():
                 return
             
             while self.pause_event.is_set():
-                time.sleep(0.1)
+                time.sleep(0.05)
             
-            delay = (event["time"] - previous_time) / self.config.get("speed")
+            
+            delay = (event["time"] - previous_time) / speed
+            #delay = (event["time"] - previous_time) / self.config.get("speed")
             time.sleep(max(delay, 0))
             previous_time = event["time"]
             
             if event["type"] == "move":
-                pyautogui.moveTo(event["x"], event["y"])
+                pyautogui.moveTo(event["x"], event["y"], duration=0)
             elif event["type"] == "click":
                 if event["pressed"]:
                     pyautogui.mouseDown(event["x"], event["y"])
@@ -50,7 +59,7 @@ class ClickPlayer:
     
     def start(self):
         if not self.events:
-            logger.warning("No events loaded.")
+            logger.info("No events loaded.")
             #print("No events loaded.")
             return
         

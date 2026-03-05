@@ -94,10 +94,11 @@ class AutoClickerApp:
     def load_file(self):
         filename = filedialog.askopenfilename(filetypes=[("JSON Files", "*.json")])
         if filename:
+            self.config.set("recording_file", filename)
             self.player.load_events(filename)
             self.config.set("last_file", filename)
             self.status_var.set(f"Loaded {filename}")
-            logger.info("Loaded: ", filename)
+            logger.info("Loaded: %s", filename)
             #print("Loaded: ", filename)
             
     def update_loop(self):
@@ -110,7 +111,7 @@ class AutoClickerApp:
             self.status_var.set("Speed updated")
             #self.player.speed = float(self.speed_entry.get())
         except ValueError:
-            logger.warning("Invalid speed value entered.")
+            logger.info("Invalid speed value entered.")
             self.status_var.set("Invalid speed value")
             #print("Invalid speed value.")
             
