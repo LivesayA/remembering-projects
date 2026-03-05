@@ -13,8 +13,9 @@ class ConfigManager:
                 "start": "f6",
                 "stop": "f7",
                 "pause": "f8",
-                # "start_recording": "f9",
-                # "stop_recording": "f10"
+                
+                "start_recording": "f9",
+                "stop_recording": "f10"
             },
             "last_file": ""
         }

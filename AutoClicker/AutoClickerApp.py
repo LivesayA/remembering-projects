@@ -25,6 +25,8 @@ class AutoClickerApp:
             start_callback=self.player.start,
             stop_callback=self.player.stop,
             pause_callback=self.player.toggle_pause,
+            start_recording_callback=self.recorder.start,
+            stop_recording_callback=self.recorder.stop,
             config=self.config
         )
         

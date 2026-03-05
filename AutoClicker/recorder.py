@@ -61,7 +61,7 @@ class Recorder:
             on_move=self._on_move
         )
         self.listener.start()
-        logger.info("Recording started.")
+        logger.info("Recording started. (Hotkey)")
         #print("Recording started.")
         
     def stop(self, filename="mouse_recording.json"):
